@@ -9,6 +9,8 @@
    Rajasthan University, Shekhawati &amp; Matsya Exam Form, Admit Card, Result - Gyaankendra
   </title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <!-- ✅ Elegant Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet"/>  
 <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -620,6 +622,174 @@
     .share-icons img:hover {transform:scale(1.2);}
     .copy-link {background:#fff; color:#333; margin-top:12px; padding:6px 10px; border-radius:8px; cursor:pointer; font-size:0.85rem;}
     .share-icon img {width:22px; height:22px;}
+
+
+ /* ✅ University news slider */
+ .uni-slider-wrapper * {
+      box-sizing: border-box;
+    }
+
+    .uni-slider-wrapper {
+      font-family:'Inter', sans-serif;
+      color:#222;
+      background:#f4f7fb;
+      padding:20px 0;
+    }
+
+    /* ✅ Heading Section */
+    .uni-slider-heading{
+      text-align:center;
+      margin:30px 0 25px;
+    }
+
+    /* ✅ Creative Premium Gradient Heading */
+    .uni-slider-heading h2{
+      font-family:'Playfair Display', serif;
+      font-size:2.4rem;
+      font-weight:700;
+      background:linear-gradient(90deg,#2563eb,#7c3aed);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      position:relative;
+      display:inline-block;
+      padding-bottom:12px;
+    }
+
+    /* ✅ Inside-Outside Amazing Underline */
+    .uni-slider-heading h2::after{
+      content:"";
+      position:absolute;
+      bottom:0;
+      left:50%;
+      transform:translateX(-50%);
+      width:110%;
+      height:4px;
+      background:linear-gradient(to right,#2563eb,#7c3aed);
+      border-radius:3px;
+      box-shadow: 0 0 6px rgba(124,58,237,0.5), 
+                  inset 0 0 6px rgba(37,99,235,0.4);
+    }
+
+    .uni-slider-heading p{
+      font-family:'Inter', sans-serif;
+      font-size:1rem;
+      color:#475569;
+      margin-top:12px;
+    }
+
+    .uni-slider-container{
+      width:92%;
+      max-width:1350px;
+      margin:0 auto 50px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .uni-slider{
+      display:flex;
+      transition: transform 0.6s ease;
+      padding:10px;
+    }
+
+    /* ✅ Wider Cards */
+    .uni-card{
+      flex:0 0 31%;
+      background:#fff;
+      margin:12px;
+      border-radius:12px;
+      padding:24px;
+      box-shadow:0 3px 12px rgba(0,0,0,0.06);
+      cursor:pointer;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .uni-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 10px 22px rgba(0,0,0,0.12);
+    }
+
+    .uni-card h3{
+      font-size:1.15rem;
+      margin-bottom:6px;
+      color:#1f2937;
+    }
+    .uni-card p{
+      font-size:0.95rem;
+      color:#4b5563;
+      line-height:1.45;
+    }
+    .uni-card a{
+      display:inline-block;
+      margin-top:12px;
+      padding:7px 14px;
+      background:#2563eb;
+      color:#fff;
+      border-radius:6px;
+      text-decoration:none;
+      font-size:0.85rem;
+      transition:background 0.3s ease;
+    }
+    .uni-card a:hover{background:#1e40af;}
+
+    /* ✅ Elegant Small Dash Indicators */
+    .uni-dots-patti{
+      margin-top:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .uni-dots span{
+      display:inline-block;
+      width:20px;
+      height:4px;
+      background:#cbd5e1;
+      margin:0 3px;
+      border-radius:3px;
+      transition:all 0.3s ease;
+      cursor:pointer;
+    }
+    .uni-dots span:hover{background:#94a3b8;}
+    .uni-dots .active{
+      background:#2563eb;
+      width:28px;
+      box-shadow:0 0 6px rgba(37,99,235,0.4);
+    }
+
+    /* ✅ Premium Modern Arrows */
+    .uni-arrow{
+      position:absolute;
+      top:42%;
+      background:rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      border:none;
+      font-size:1.7rem;
+      width:50px;
+      height:50px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      border-radius:50%;
+      box-shadow:0 4px 14px rgba(0,0,0,0.2);
+      transition:all 0.3s ease;
+      z-index:5;
+      color:#2563eb;
+    }
+    .uni-arrow:hover{
+      background:rgba(255,255,255,0.7);
+      transform:scale(1.12);
+      box-shadow:0 6px 18px rgba(0,0,0,0.3);
+    }
+    .uni-arrow.prev{left:15px;}
+    .uni-arrow.next{right:15px;}
+
+    /* Responsive */
+    @media(max-width:768px){
+      .uni-card{flex:0 0 80%;}
+    }
+    @media(max-width:480px){
+      .uni-card{flex:0 0 100%; margin:8px;}
+      .uni-slider-heading h2{font-size:1.7rem;}
+    }
 </style>
  </head>
  <body>
@@ -939,6 +1109,61 @@
     </div>
    </div>
   </section>
+
+
+ 
+  <!-- University news slider -->
+<div class="uni-slider-wrapper">
+  <div class="uni-slider-heading">
+    <h2>Our University Programs</h2>
+    <p>Explore premium courses and learn from top instructors worldwide</p>
+  </div>
+
+  <div class="uni-slider-container">
+    <div class="uni-slider" id="uni-slider">
+      <div class="uni-card">
+        <h3>Computer Science</h3>
+        <p>Learn AI, programming, and modern technologies with top experts.</p>
+        <a href="#">View Details</a>
+      </div>
+      <div class="uni-card">
+        <h3>Business Management</h3>
+        <p>Master global leadership and management strategies.</p>
+        <a href="#">View Details</a>
+      </div>
+      <div class="uni-card">
+        <h3>Engineering</h3>
+        <p>Practical engineering courses with real-world applications.</p>
+        <a href="#">View Details</a>
+      </div>
+      <div class="uni-card">
+        <h3>History & Culture</h3>
+        <p>Explore world history and cultural heritage deeply.</p>
+        <a href="#">View Details</a>
+      </div>
+      <div class="uni-card">
+        <h3>Science & Tech</h3>
+        <p>Cutting-edge research and science programs.</p>
+        <a href="#">View Details</a>
+      </div>
+      <div class="uni-card">
+        <h3>Arts & Design</h3>
+        <p>Creative courses in art, design, and aesthetics.</p>
+        <a href="#">View Details</a>
+      </div>
+    </div>
+
+    <button class="uni-arrow prev" onclick="uniPrevSlide()">&#10094;</button>
+    <button class="uni-arrow next" onclick="uniNextSlide()">&#10095;</button>
+
+    <div class="uni-dots-patti">
+      <div class="uni-dots" id="uni-dots"></div>
+    </div>
+  </div>
+</div>
+
+
+ 
   <!-- susbcribe form -->
   <div class="subscription-form">
    <h2>
@@ -1423,6 +1648,53 @@ let pageURL = window.location.href;
       else if(platform==='telegram'){window.open(`https://t.me/share/url?url=${encoded}`,'_blank');}
     }
 
+   // ✅ University news slider
+ const uniSlider = document.getElementById('uni-slider');
+  const uniCards = document.querySelectorAll('.uni-card');
+  const uniDotsContainer = document.getElementById('uni-dots');
+  let uniIndex = 0;
+  const uniVisibleCards = 3; 
+  const uniTotal = uniCards.length;
+
+  function uniUpdateSlider(){
+    const cardWidth = uniCards[0].offsetWidth + 24;
+    uniSlider.style.transform = `translateX(-${uniIndex * cardWidth}px)`;
+    document.querySelectorAll('.uni-dots span').forEach((dot,i)=>{
+      dot.classList.toggle('active', i===uniIndex);
+    });
+  }
+
+  function uniNextSlide(){
+    if(uniIndex < uniTotal - uniVisibleCards){
+      uniIndex++;
+    } else {
+      uniIndex = 0;
+    }
+    uniUpdateSlider();
+  }
+
+  function uniPrevSlide(){
+    if(uniIndex > 0){
+      uniIndex--;
+    } else {
+      uniIndex = uniTotal - uniVisibleCards;
+    }
+    uniUpdateSlider();
+  }
+
+  setInterval(uniNextSlide, 6000);
+
+  for(let i=0; i<=uniTotal-uniVisibleCards; i++){
+    const dash=document.createElement('span');
+    dash.style.cursor='pointer';
+    dash.onclick=()=>{uniIndex=i; uniUpdateSlider();}
+    if(i===0) dash.classList.add('active');
+    uniDotsContainer.appendChild(dash);
+  }
+
+  window.addEventListener('resize', uniUpdateSlider);
+
+ 
 </script>
 
 
